@@ -1,0 +1,49 @@
+<% layout('layout') %> <!-- Menyertakan layout.ejs sebagai template dasar -->
+    <% const title='Kelola Data Bibit' ; const heading='Kelola Data Bibit' ; %>
+
+        <!-- Form untuk menambahkan Bibit Baru -->
+        <h2>Tambah Bibit</h2>
+        <form action="/todo" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nama Bibit</label>
+                <input type="text" class="form-control" id="name" name="name" value="Bibit Tomat" required>
+            </div>
+            <div class="mb-3">
+                <label for="jenis" class="form-label">Jenis Bibit</label>
+                <input type="text" class="form-control" id="jenis" name="jenis" value="Sayuran" required>
+            </div>
+            <div class="mb-3">
+                <label for="stok" class="form-label">Stok Bibit</label>
+                <input type="number" class="form-control" id="stok" name="stok" value="100" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+
+        <!-- Daftar Bibit -->
+        <h2 class="mt-4">Daftar Bibit</h2>
+        <ul class="list-group">
+            <!-- Bibit 1 -->
+            <li class="list-group-item">
+                <span><strong>Nama:</strong> Bibit Tomat, <strong>Jenis:</strong> Sayuran, <strong>Stok:</strong>
+                    100</span>
+                <span class="float-end">
+                    <button class="btn btn-sm btn-warning">Edit</button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                </span>
+            </li>
+
+            <!-- Bibit 2 -->
+            <li class="list-group-item">
+                <span><strong>Nama:</strong> Bibit Cabai, <strong>Jenis:</strong> Sayuran, <strong>Stok:</strong>
+                    50</span>
+                <span class="float-end">
+                    <button class="btn btn-sm btn-warning">Edit</button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                </span>
+            </li>
+        </ul>
+
+        <!-- Save Button (simulasi Save untuk perubahan data) -->
+        <div class="mt-4">
+            <button class="btn btn-success">Save Changes</button>
+        </div>

@@ -1,0 +1,27 @@
+<h1>Data Bibit</h1>
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Nama Bibit</th>
+            <th>Jenis</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+        <% bibit.forEach((item, index)=> { %>
+            <tr>
+                <td>
+                    <%= index + 1 %>
+                </td>
+                <td>
+                    <%= item.nama %>
+                </td>
+                <td>
+                    <a href="/bibit/edit/<%= index %>">Edit</a>
+                    <a href="/bibit/delete/<%= index %>">Delete</a>
+                </td>
+            </tr>
+            <% }); %>
+    </tbody>
+</table>

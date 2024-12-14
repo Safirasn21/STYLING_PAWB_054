@@ -1,0 +1,27 @@
+<h1>Data Pupuk</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Nama Pupuk</th>
+            <th>Jenis</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% pupuk.forEach((item, index)=> { %>
+            <tr>
+                <td>
+                    <%= index + 1 %>
+                </td>
+                <td>
+                    <%= item.nama %>
+                </td>
+                <td>
+                    <a href="/pupuk/edit/<%= index %>">Edit</a>
+                    <a href="/pupuk/delete/<%= index %>">Delete</a>
+                </td>
+            </tr>
+            <% }); %>
+    </tbody>
+</table>
